@@ -2,19 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createStore } from "redux";
 import { Provider, connect } from "react-redux";
-
+import * as Action from "./action";
 /* Actionの実装 */
-
-// Action名の定義
-const SEND = Symbol("SEND");
-
-// Action Creators
-function send(value) {
-    return {
-        type: SEND,
-        value
-    };
-}
 
 function createReducer (initialState, handlers) {
     return function reducer(state = initialState, action) {
@@ -31,7 +20,7 @@ const initialState = {
 };
 
 const formReducer = createReducer([], {
-    [SEND]: (state, action) => {
+    [Action.SEND]: (state, action) => {
         return {...state, value: action.value};
     }
 });
@@ -48,11 +37,10 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         onClick(value){
-            dispatch(send(value));
+            dispatch(Action.send(value));
         },
     };
 }
-
 
 const AppContainer = connect(
     mapStateToProps,

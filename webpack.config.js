@@ -22,7 +22,10 @@ module.exports = {
     devServer: {
         contentBase: 'public',
         port: 3300,
-        host: "0.0.0.0"
+        host: "0.0.0.0",
+        watchOptions: {
+            poll: true
+        }
     },
     plugins: [
         new ExtractTextPlugin({
