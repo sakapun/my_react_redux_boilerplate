@@ -17,6 +17,7 @@ function createReducer (initialState, handlers) {
 
 const initialState = {
     value: "unkouno",
+    loops: ["hoge", "fuga", "piyo"],
 };
 
 const formReducer = createReducer([], {
@@ -32,6 +33,7 @@ import Button from "./components/Button/Button.js";
 function mapStateToProps(state) {
     return {
         value: state.value,
+        loops: state.loops,
     };
 }
 function mapDispatchToProps(dispatch) {
