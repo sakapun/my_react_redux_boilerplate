@@ -1,19 +1,16 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 
 export default class Button extends React.Component {
-    render(){
+    render() {
         return <div>
-            <button className="Button">
+            <button className="Button" onClick={() => { this.props.addLoops(1); }}>
                 aiu {this.props.value}
             </button>
-            {this.props.loops.map((d) => {
-                return <div>{d}</div>;
-            })}
         </div>;
     }
 }
 
 Button.propTypes = {
-    value: PropTypes.string,
-    loops: PropTypes.array
+	value: PropTypes.string,
+	addLoops: PropTypes.func,
 };
