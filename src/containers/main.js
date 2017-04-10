@@ -4,21 +4,19 @@ import * as Main from '../redux/modules/main';
 
 // components
 import Button from '../components/Button/Button';
+import Mountain from '../components/Mountain';
 
 class App extends React.Component {
 	render() {
 		return (<div>
 			<Button {...this.props} />
-			{this.props.loops.map((d) => {
-				const divs = <div>{d.name}</div>;
-				return divs;
-			})}
+			{this.props.loops.map((d) => <Mountain {...d} />)}
 		</div>);
 	}
 }
 
 App.propTypes = {
-	loops: PropTypes.list,
+	loops: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 function mapStateToProps(state) {
