@@ -17,6 +17,10 @@ class App extends React.Component {
 	}
 }
 
+App.propTypes = {
+	loops: PropTypes.list.isRequired,
+};
+
 function mapStateToProps(state) {
 	return {
 		value: state.value,
