@@ -4,12 +4,13 @@ import { createStore } from 'redux';
 import { Provider, connect } from 'react-redux';
 import { formReducer } from './redux/modules/main';
 import App from './containers/main';
+import Mountain from './settingArray.json';
 /* Actionの実装 */
 
 
 const initialState = {
 	value: 'unkouno',
-	loops: ['hoge', 'fuga', 'piyo'],
+	loops: Mountain,
 };
 
 

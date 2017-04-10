@@ -11,5 +11,5 @@ export function add(value) {
 
 // Reducer
 export const formReducer = createReducer([], {
-	[SEND]: (state, action) => { return { ...state, loops: [...state.loops, action.value] }; },
+	[SEND]: (state, action) => { return { ...state, loops: [...state.loops, { name: action.value }] }; },
 });

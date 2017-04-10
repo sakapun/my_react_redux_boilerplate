@@ -10,7 +10,7 @@ class App extends React.Component {
 		return (<div>
 			<Button {...this.props} />
 			{this.props.loops.map((d) => {
-				const divs = <div>{d}</div>;
+				const divs = <div>{d.name}</div>;
 				return divs;
 			})}
 		</div>);
@@ -18,7 +18,7 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-	loops: PropTypes.list.isRequired,
+	loops: PropTypes.list,
 };
 
 function mapStateToProps(state) {
