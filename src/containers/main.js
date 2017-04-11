@@ -1,23 +1,23 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import * as Main from '../redux/modules/main';
+import AppBar from 'material-ui/AppBar';
 
+import * as Main from '../redux/modules/main';
 // components
+
 import Button from '../components/Button/Button';
-import Mountain from '../components/Mountain';
+import Mountains from '../components/Mountain';
 
 class App extends React.Component {
 	render() {
 		return (<div>
+			<AppBar title="My AppBar" />
+			<h1>Material-UI</h1>
 			<Button {...this.props} />
-			{this.props.loops.map((d) => <Mountain {...d} />)}
+			<Mountains {...this.props} />
 		</div>);
 	}
 }
-
-App.propTypes = {
-	loops: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
 
 function mapStateToProps(state) {
 	return {
