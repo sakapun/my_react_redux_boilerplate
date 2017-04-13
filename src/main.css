@@ -1,5 +1,5 @@
 @import "styles/bootstrap/css/bootstrap.css";
-@import "styles/bootstrap/css/bootstrap-theme.css";
+/*@import "styles/bootstrap/css/bootstrap-theme.css";*/
 @import "styles/base.css";
 @import "./components/**/*.css";
 
