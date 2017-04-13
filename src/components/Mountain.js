@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 
 const Mountains = props => (
 	<div className="container">
-		{props.loops.map(d => <Mountain {...d} />)}
+		{props.loops.map((d, ind) => <Mountain key={ind} {...d} />)}
 	</div>
 );
 Mountains.propTypes = {
