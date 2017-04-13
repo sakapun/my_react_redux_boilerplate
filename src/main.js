@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
+import './main.css';
+
 import { formReducer } from './redux/modules/main';
 import App from './containers/main';
 import Mountain from './settingArray.json';
