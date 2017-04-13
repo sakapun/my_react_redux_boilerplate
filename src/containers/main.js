@@ -6,7 +6,7 @@ import * as Main from '../redux/modules/main';
 // components
 
 import Button from '../components/Button/Button';
-import Mountains from '../components/Mountain';
+import Mountains from '../components/Mountain/Mountain';
 
 class App extends React.Component {
 	render() {
