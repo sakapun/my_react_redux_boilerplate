@@ -11,13 +11,13 @@ import './main.css';
 
 import { formReducer } from './redux/modules/main';
 import App from './containers/main';
-import Mountain from '../data/settingArray.json';
+import MountainJson from '../data/settingArray.json';
 
 injectTapEventPlugin();
 
 const initialState = {
 	value: 'yama',
-	loops: Mountain,
+	loops: MountainJson,
 };
 
 const store = createStore(formReducer, initialState);
