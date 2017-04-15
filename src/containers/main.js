@@ -10,12 +10,14 @@ import Mountains from '../components/Mountain/Mountain';
 
 class App extends React.Component {
 	render() {
-		return (<div>
-			<AppBar title="My AppBar" />
-			<h1>Material-UI</h1>
-			<Button {...this.props} />
-			<Mountains {...this.props} />
-		</div>);
+		return (
+			<div>
+				<AppBar title="My AppBar" />
+				<h1>Material-UI</h1>
+				<Button {...this.props} />
+				<Mountains {...this.props} />
+			</div>
+		);
 	}
 }
 

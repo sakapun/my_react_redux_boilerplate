@@ -11,7 +11,7 @@ import './main.css';
 
 import { formReducer } from './redux/modules/main';
 import App from './containers/main';
-import Mountain from './settingArray.json';
+import Mountain from '../data/settingArray.json';
 
 injectTapEventPlugin();
 
