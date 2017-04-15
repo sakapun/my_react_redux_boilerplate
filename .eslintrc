@@ -8,6 +8,7 @@
     "no-tabs": 0,
     "react/jsx-indent": ["warn", "tab"],
     "arrow-body-style": ["error", "as-needed", { "requireReturnForObjectLiteral": true }],
-    "react/jsx-filename-extension": 0
+    "react/jsx-filename-extension": 0,
+    "max-len": 0
   }
 }

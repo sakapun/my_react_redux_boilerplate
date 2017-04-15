@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import AppBar from 'material-ui/AppBar';
 
@@ -8,17 +8,15 @@ import * as Main from '../redux/modules/main';
 import Button from '../components/Button/Button';
 import Mountains from '../components/Mountain/Mountain';
 
-class App extends React.Component {
-	render() {
-		return (
-			<div>
-				<AppBar title="My AppBar" />
-				<h1>Material-UI</h1>
-				<Button {...this.props} />
-				<Mountains {...this.props} />
-			</div>
-		);
-	}
+function App(props) {
+	return (
+		<div>
+			<AppBar title="My AppBar" />
+			<h1>Material-UI</h1>
+			<Button {...props} />
+			<Mountains {...props} />
+		</div>
+	);
 }
 
 function mapStateToProps(state) {
