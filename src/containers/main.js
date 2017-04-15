@@ -5,15 +5,12 @@ import AppBar from 'material-ui/AppBar';
 import * as Main from '../redux/modules/main';
 // components
 
-import Button from '../components/Button/Button';
 import Mountains from '../components/Mountain/Mountain';
 
 function App(props) {
 	return (
 		<div>
-			<AppBar title="My AppBar" />
-			<h1>Material-UI</h1>
-			<Button {...props} />
+			<AppBar title="やま" />
 			<Mountains {...props} />
 		</div>
 	);
